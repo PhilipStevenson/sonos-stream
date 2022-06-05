@@ -10,3 +10,5 @@ RUN apk add --no-cache \
 USER root
 
 EXPOSE $STREAM_PORT
+
+CMD ["sh", "-c", "icecast -c $ICECAST_CONFIG_DIR"]
