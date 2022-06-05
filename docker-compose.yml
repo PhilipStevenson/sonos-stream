@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    container_name: audio-stream
+    environment:
+      STREAM_PORT: $STREAM_PORT
+    image: audio-stream
+    ports:
+      - $STREAM_PORT:$STREAM_PORT
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t

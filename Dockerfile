@@ -6,3 +6,7 @@ ENV ICECAST_VERSION=2.4.4-r7
 RUN apk add --no-cache \
     darkice=$DARKICE_VERSION \
     icecast=$ICECAST_VERSION
+
+USER root
+
+EXPOSE $STREAM_PORT
