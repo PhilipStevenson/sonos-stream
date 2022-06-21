@@ -13,5 +13,4 @@ USER root
 
 EXPOSE $STREAM_PORT
 
-CMD ["sh", "-c", "darkice -c /etc/darkice.cfg"]
-# CMD ["sh", "-c", "icecast -c $ICECAST_CONFIG_DIR"]
+CMD ["sh", "-c", "icecast -c $ICECAST_CONFIG_DIR", "&&", "sh", "-c", "darkice -c /etc/darkice.cfg"]
