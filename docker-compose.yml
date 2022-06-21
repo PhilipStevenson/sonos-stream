@@ -3,6 +3,8 @@ services:
   app:
     build: .
     container_name: audio-stream
+    devices:
+      - "/dev/snd/:/dev/snd/"
     environment:
       ICECAST_CONFIG_DIR: $ICECAST_CONFIG_DIR
       STREAM_PORT: $STREAM_PORT
